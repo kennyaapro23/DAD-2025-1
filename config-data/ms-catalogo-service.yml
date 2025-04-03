@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:h2:mem:ms_catalogo
     driver-class-name: org.h2.Driver
-    username: root
+    username: sa
     password: password
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
@@ -20,3 +20,9 @@ springdoc:
   swagger-ui:
     enabled: true
     path: /doc/swagger-ui.html
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka
+  instance:
+    hostname: localhost
